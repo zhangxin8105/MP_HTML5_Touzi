@@ -388,7 +388,8 @@ function touzi_Start5() {
 	var index = Math.floor((myDate.getTime() / 1000 / 60) % 6);
 
 	var Tindex = new Array(obj.length);
-	var count = Math.floor((obj.length + 1) / 2);
+	// var count = Math.ceil((obj.length + 1) / 2);
+	var count = Math.floor((obj.length + rand(0, 1)) / 2);
 
 	for (var i = 0; i < count; i++) {
 		var ri = rand(0, obj.length - 1);
