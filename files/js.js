@@ -403,7 +403,7 @@ function touzi_Start5() {
 		if (Tindex[i] == null) {
 			Tindex[i] = rand(0, K.length - 1);
 		}
-		touziSetting(obj[i], Tindex[i]);
+		touziSetting(obj[i], K[Tindex[i]]);
 	}
 	// console.log(Tindex);
 }
