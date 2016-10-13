@@ -1,3 +1,4 @@
+// ===============================
 var TIMES_Array = new Array();
 
 function touziStartCom(index, clickMax, run) {
@@ -29,11 +30,7 @@ function touziStartCom(index, clickMax, run) {
 	}
 }
 
-function touziStart2() {
-	touziStartCom(2, 2, touzi_Start2);
-}
-
-function touzi_Start2() {
+function addTouzi() {
 	var html = [];
 	for (var i = 0; i < TZNUM; i++) {
 		html.push('<div class="touzi" onclick="touziClick(this)"></div>');
@@ -41,6 +38,19 @@ function touzi_Start2() {
 	$('touziTable').innerHTML = html.join('');
 
 	var obj = $('touziTable').getElementsByTagName('div');
+
+	return obj;
+}
+
+var TOUZI_LIST = [ '1', '2', '3', '4', '5', '6' ];
+
+// ===============================
+function touziStart2() {
+	touziStartCom(2, 2, touzi_Start2);
+}
+
+function touzi_Start2() {
+	var obj = addTouzi();
 	TZDELAY = 30;
 	$('touziRound').innerHTML = '第 ' + TZROUND + ' 轮';
 	TZROUND++;
@@ -56,7 +66,7 @@ function touziAni2(obj) {
 
 	var index = -1;
 	if (TZDELAY > 200) {
-		K = [ '1', '2', '3', '4', '5', '6' ];
+		K = TOUZI_LIST;
 		aniIng = 0;
 		index = rand(0, K.length - 1);
 	} else {
@@ -76,61 +86,42 @@ function touziAni2(obj) {
 	}
 }
 
+// ===============================
 function touziStart3() {
 	touziStartCom(3, 2, touzi_Start3);
 }
 
 function touzi_Start3() {
-	var html = [];
-	for (var i = 0; i < TZNUM; i++) {
-		html.push('<div class="touzi" onclick="touziClick(this)"></div>');
-	}
-	$('touziTable').innerHTML = html.join('');
-
-	var obj = $('touziTable').getElementsByTagName('div');
-	var K = [ '1', '2', '3', '4', '5', '6' ];
-	var index = rand(0, K.length - 1);
+	var obj = addTouzi();
+	var index = rand(0, TOUZI_LIST.length - 1);
 	for (var i = 0; i < obj.length; i++) {
-		touziSetting(obj[i], K[index]);
+		touziSetting(obj[i], TOUZI_LIST[index]);
 	}
 }
 
+// ===============================
 function touziStart4() {
 	touziStartCom(4, 2, touzi_Start4);
 }
 
 function touzi_Start4() {
-	var html = [];
-	for (var i = 0; i < TZNUM; i++) {
-		html.push('<div class="touzi" onclick="touziClick(this)"></div>');
-	}
-	$('touziTable').innerHTML = html.join('');
-
-	var obj = $('touziTable').getElementsByTagName('div');
-	var K = [ '1', '2', '3', '4', '5', '6' ];
-	var index = rand(0, K.length - 1);
+	var obj = addTouzi();
+	var index = rand(0, TOUZI_LIST.length - 1);
 	for (var i = 0; i < obj.length; i++) {
-		touziSetting(obj[i], K[rand(0, K.length - 1)]);
+		touziSetting(obj[i], TOUZI_LIST[rand(0, TOUZI_LIST.length - 1)]);
 	}
 
 	for (var i = 0; i < 6; i++) {
 	}
 }
 
+// ===============================
 function touziStart5() {
 	touziStartCom(5, 2, touzi_Start5);
 }
 
 function touzi_Start5() {
-	var myDate = new Date();
-	var html = [];
-	for (var i = 0; i < TZNUM; i++) {
-		html.push('<div class="touzi" onclick="touziClick(this)"></div>');
-	}
-	$('touziTable').innerHTML = html.join('');
-
-	var obj = $('touziTable').getElementsByTagName('div');
-	var K = [ '1', '2', '3', '4', '5', '6' ];
+	var obj = addTouzi();
 	var myDate = new Date()
 	var index = Math.floor((myDate.getTime() / 1000 / 60) % 6);
 
@@ -149,14 +140,16 @@ function touzi_Start5() {
 	// console.log(Tindex);
 	for (var i = 0; i < Tindex.length; i++) {
 		if (Tindex[i] == null) {
-			Tindex[i] = rand(0, K.length - 1);
+			Tindex[i] = rand(0, TOUZI_LIST.length - 1);
 		}
-		touziSetting(obj[i], K[Tindex[i]]);
+		touziSetting(obj[i], TOUZI_LIST[Tindex[i]]);
 	}
 	// console.log(Tindex);
 }
 
+// ===============================
 var isCanTouziClick = false;
+var touziClickStartTimeout = null;
 
 function touziClick(obj) {
 	if (isCanTouziClick) {
@@ -166,7 +159,6 @@ function touziClick(obj) {
 	}
 }
 
-var touziClickStartTimeout = null;
 function touziClickStart() {
 	isCanTouziClick = true;
 	// alert("zhangxin");
