@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://fanzhuo.sinaapp.com/?app=touzi.main -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" id="viewport"
+	content="user-scalable=no,target-densitydpi=high-dpi,width=480">
+<meta name="format-detection" content="telephone=no,email=no">
+<title>饭桌游戏 之 骰子</title>
+<link href="./files/css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div
+		style="text-align: right; margin-top: 1em; font-size: 1.5em; padding-right: 20px; border-bottom: 1px solid #eee; margin-bottom: 0.5em; height: 70px;"
+		id="touziRound" onclick="touziClickStart()">第 1 轮</div>
+
+	<a class="button abs" style="top: 35px; left: 5%; padding: 0 10px;"
+		href="http://fanzhuo.sinaapp.com/">返回</a>
+
+	<div
+		style="width: 90%; margin: auto; min-height: 50%; background: url(touzi/img/pic250.jpg); border-radius: 13px;"
+		id="touziTable">
+		<div class="touzi" style="display: none"></div>
+	</div>
+
+	<a class="button mainbtn" onclick="touziNum(-1)" style="width: 23%">－数量</a>
+	<span style="display: inline-block; width: 40%; text-align: center"
+		id="touziNumSpan" onclick="touziStart3()">5个</span>
+	<a class="button mainbtn" onclick="touziNum(1)" style="width: 22%">＋数量</a>
+	<a class="button mainbtn" onclick="touziStart()"><font
+		color="#cc0000">开始投骰子</font></a>
+	<a class="button mainbtn2" onclick="touziStart5()"></a>
+
+	<audio src="touzi/img/roll.mp3" preload="" id="rollMp3">
+		<script>
+			var TZNUM = 5;
+		</script>
+		<script src="./files/js.js"></script>
+	</audio>
+</body>
+</html>
