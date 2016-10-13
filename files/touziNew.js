@@ -1,26 +1,36 @@
-var TZTIMES_2 = 0, TZTIMER_2 = null;
-function touziStart2() {
-	// if(aniIng==1)return;
+var TIMES_Array = new Array();
 
-	TZTIMES_2++;
-	if (TZTIMES_2 >= 2) {
-
-		TZTIMES_2 = 0;
-		if (TZTIMER) {
-			clearTimeout(TZTIMER_2);
-		}
-		TZTIMER_2 = null;
-
-		touzi_Start2();
-	} else {
-		if (TZTIMER_2) {
-			clearTimeout(TZTIMER_2);
-		}
-		TZTIMER_2 = setTimeout(function() {
-			TZTIMES_2 = 0;
-			TZTIMER_2 = null;
-		}, 2000);
+function touziStartCom(index, clickMax, run) {
+	if (!TIMES_Array[index]) {
+		TIMES_Array[index] = {};
 	}
+	if (typeof (TIMES_Array[index].count) == "undefined") {
+		TIMES_Array[index].count = 0;
+	}
+
+	TIMES_Array[index].count++;
+	if (TIMES_Array[index].count >= clickMax) {
+		TIMES_Array[index].count = 0;
+
+		if (TIMES_Array[index].timeout) {
+			clearTimeout(TIMES_Array[index].timeout);
+		}
+		TIMES_Array[index].timeout = null;
+
+		run();
+	} else {
+		if (TIMES_Array[index].timeout) {
+			clearTimeout(TIMES_Array[index].timeout);
+		}
+		TIMES_Array[index].timeout = setTimeout(function() {
+			TIMES_Array[index].count = 0;
+			TIMES_Array[index].timeout = null;
+		}, 1500);
+	}
+}
+
+function touziStart2() {
+	touziStartCom(2, 2, touzi_Start2);
 }
 
 function touzi_Start2() {
@@ -66,28 +76,8 @@ function touziAni2(obj) {
 	}
 }
 
-var TZTIMES_3 = 0, TZTIMER_3 = null;
 function touziStart3() {
-	// if(aniIng==1)return;
-	TZTIMES_3++;
-	if (TZTIMES_3 >= 2) {
-
-		TZTIMES_3 = 0;
-		if (TZTIMER_3) {
-			clearTimeout(TZTIMER_3);
-		}
-		TZTIMER_3 = null;
-
-		touzi_Start3();
-	} else {
-		if (TZTIMER_3) {
-			clearTimeout(TZTIMER_3);
-		}
-		TZTIMER_3 = setTimeout(function() {
-			TZTIMES_3 = 0;
-			TZTIMER_3 = null;
-		}, 2000);
-	}
+	touziStartCom(3, 2, touzi_Start3);
 }
 
 function touzi_Start3() {
@@ -105,28 +95,8 @@ function touzi_Start3() {
 	}
 }
 
-var TZTIMES_4 = 0, TZTIMER_4 = null;
 function touziStart4() {
-	// if(aniIng==1)return;
-	TZTIMES_4++;
-	if (TZTIMES_4 >= 2) {
-
-		TZTIMES_4 = 0;
-		if (TZTIMER_4) {
-			clearTimeout(TZTIMER_4);
-		}
-		TZTIMER_4 = null;
-
-		touzi_Start4();
-	} else {
-		if (TZTIMER_4) {
-			clearTimeout(TZTIMER_4);
-		}
-		TZTIMER_4 = setTimeout(function() {
-			TZTIMES_4 = 0;
-			TZTIMER_4 = null;
-		}, 2000);
-	}
+	touziStartCom(4, 2, touzi_Start4);
 }
 
 function touzi_Start4() {
@@ -147,28 +117,8 @@ function touzi_Start4() {
 	}
 }
 
-var TZTIMES_5 = 0, TZTIMER_5 = null;
 function touziStart5() {
-	// if(aniIng==1)return;
-	TZTIMES_5++;
-	if (TZTIMES_5 >= 2) {
-
-		TZTIMES_5 = 0;
-		if (TZTIMER_5) {
-			clearTimeout(TZTIMER_5);
-		}
-		TZTIMER_5 = null;
-
-		touzi_Start5();
-	} else {
-		if (TZTIMER_5) {
-			clearTimeout(TZTIMER_5);
-		}
-		TZTIMER_5 = setTimeout(function() {
-			TZTIMES_5 = 0;
-			TZTIMER_5 = null;
-		}, 2000);
-	}
+	touziStartCom(5, 2, touzi_Start5);
 }
 
 function touzi_Start5() {
