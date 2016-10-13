@@ -1,61 +1,185 @@
-html{ height:100%;}
-html,body{ margin:0; padding:0; background:#212B2C; color:#fff; font-size:27px; width:100%;}
-body{ height:95%;}
-
-a.button{ 
--moz-border-radius:3px;
--webkit-border-radius:3px; 
-border-radius:3px;
-background: #F0DEB8;
-background: -moz-linear-gradient(19% 75% 90deg,#F0DEB8, #FDF0D1, #fff 100%);
-background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#F0DEB8), color-stop(.3,#FDF0D1));
-color:#836d4d;
-font-family:arial,helvetica,sans-serif;
-font-weight:bold;
-border: 1px solid #d4c198;
-height:2em; line-height:2em; text-align:center;
-text-decoration:none;
-cursor:pointer;
+html {
+	height: 100%;
 }
-a.button:hover{
-background: #EBD9B4;
-background: -moz-linear-gradient(19% 75% 90deg,#EBD9B4, #F2E6C8, #F5F5F5 100%);
-background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F5F5F5), to(#EBD9B4), color-stop(.3,#F2E6C8));
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background: #212B2C;
+	color: #fff;
+	font-size: 27px;
+	width: 100%;
 }
-a.mainbtn{ width:90%; display:inline-block; margin:0.5em auto; margin-left:5%;}
-.input{ height:50px; ;border-radius:3px; background:#fff; border:1px solid #000;}
 
-a.mainbtn2{ width:90%; display:inline-block; margin:0.5em auto; margin-left:5%; background:#000; opacity:0}
+body {
+	height: 95%;
+}
 
-.sbutton{ text-align:center; height:2em;background:#CCC}
-.cont{ width:90%; margin:1em auto; font-size:0.7em}
-.cont p{ text-indent:2em; line-height:1.5em;}
+a.button {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #F0DEB8;
+	background: -moz-linear-gradient(19% 75% 90deg, #F0DEB8, #FDF0D1, #fff 100%);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF),
+		to(#F0DEB8), color-stop(.3, #FDF0D1));
+	color: #836d4d;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
+	border: 1px solid #d4c198;
+	height: 2em;
+	line-height: 2em;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
 
-.cont h3,.yellow{ color:#F3BE01}
-a.link{ color:#0F0; text-decoration:underline; cursor:pointer}
-.abs{ position:absolute;}
+a.button:hover {
+	background: #EBD9B4;
+	background: -moz-linear-gradient(19% 75% 90deg, #EBD9B4, #F2E6C8, #F5F5F5 100%);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F5F5F5),
+		to(#EBD9B4), color-stop(.3, #F2E6C8));
+}
 
-.creat_list{ width:90%;font-size:0.7em; margin:auto; background:#333; border:1px solid #090; color:#fff; margin-bottom:1em;}
-ol{  padding:0; margin:10px;}
-li{  line-height:1.5em; margin-left:2em;}
+a.mainbtn {
+	width: 90%;
+	display: inline-block;
+	margin: 0.5em auto;
+	margin-left: 5%;
+}
 
-#tips{ border:1px solid #000; background:rgba(255,255,255,.5); font-size:21px; position:absolute; z-index:10000; top:5%; display:inline-block; right:5%;border-radius:7px; padding:5px 10px;}
+.input {
+	height: 50px;;
+	border-radius: 3px;
+	background: #fff;
+	border: 1px solid #000;
+}
 
+a.mainbtn2 {
+	width: 90%;
+	display: inline-block;
+	margin: 0.5em auto;
+	margin-left: 5%;
+	background: #000;
+	opacity: 0
+}
 
+.sbutton {
+	text-align: center;
+	height: 2em;
+	background: #CCC
+}
 
+.cont {
+	width: 90%;
+	margin: 1em auto;
+	font-size: 0.7em
+}
 
-.touzi{background:url(../touzi/img/touzi.gif); width:70px; height:70px; margin:15px; display:inline-block}
-.touzi1{ background-position:0 0}
-.touzia{ background-position:-70px 0}
-.touzi3{ background-position:-140px 0}
-.touzi6{ background-position:-210px 0}
+.cont p {
+	text-indent: 2em;
+	line-height: 1.5em;
+}
 
-.touzi2{ background-position:0 -70px}
-.touzib{ background-position:-70px -70px}
-.touzic{ background-position:-140px -70px}
-.touzid{ background-position:-210px -70px}
+.cont h3, .yellow {
+	color: #F3BE01
+}
 
-.touzi4{ background-position:0 -140px}
-.touzie{ background-position:-70px -140px}
-.touzi5{ background-position:-140px -140px}
-.touzif{ background-position:-210px -140px}
+a.link {
+	color: #0F0;
+	text-decoration: underline;
+	cursor: pointer
+}
+
+.abs {
+	position: absolute;
+}
+
+.creat_list {
+	width: 90%;
+	font-size: 0.7em;
+	margin: auto;
+	background: #333;
+	border: 1px solid #090;
+	color: #fff;
+	margin-bottom: 1em;
+}
+
+ol {
+	padding: 0;
+	margin: 10px;
+}
+
+li {
+	line-height: 1.5em;
+	margin-left: 2em;
+}
+
+#tips {
+	border: 1px solid #000;
+	background: rgba(255, 255, 255, .5);
+	font-size: 21px;
+	position: absolute;
+	z-index: 10000;
+	top: 5%;
+	display: inline-block;
+	right: 5%;
+	border-radius: 7px;
+	padding: 5px 10px;
+}
+
+.touzi {
+	background: url(../touzi/img/touzi.gif);
+	width: 70px;
+	height: 70px;
+	margin: 15px;
+	display: inline-block
+}
+
+.touzi1 {
+	background-position: 0 0
+}
+
+.touzia {
+	background-position: -70px 0
+}
+
+.touzi3 {
+	background-position: -140px 0
+}
+
+.touzi6 {
+	background-position: -210px 0
+}
+
+.touzi2 {
+	background-position: 0 -70px
+}
+
+.touzib {
+	background-position: -70px -70px
+}
+
+.touzic {
+	background-position: -140px -70px
+}
+
+.touzid {
+	background-position: -210px -70px
+}
+
+.touzi4 {
+	background-position: 0 -140px
+}
+
+.touzie {
+	background-position: -70px -140px
+}
+
+.touzi5 {
+	background-position: -140px -140px
+}
+
+.touzif {
+	background-position: -210px -140px
+}
