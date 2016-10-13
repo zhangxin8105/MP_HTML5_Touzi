@@ -1,24 +1,24 @@
-
+var TZTIMES_2 = 0, TZTIMER_2 = null;
 function touziStart2() {
 	// if(aniIng==1)return;
 
-	TZTIMES++;
-	if (TZTIMES >= 2) {
+	TZTIMES_2++;
+	if (TZTIMES_2 >= 2) {
 
-		TZTIMES = 0;
+		TZTIMES_2 = 0;
 		if (TZTIMER) {
-			clearTimeout(TZTIMER);
+			clearTimeout(TZTIMER_2);
 		}
-		TZTIMER = null;
+		TZTIMER_2 = null;
 
 		touzi_Start2();
 	} else {
-		if (TZTIMER) {
-			clearTimeout(TZTIMER);
+		if (TZTIMER_2) {
+			clearTimeout(TZTIMER_2);
 		}
-		TZTIMER = setTimeout(function() {
-			TZTIMES = 0;
-			TZTIMER = null;
+		TZTIMER_2 = setTimeout(function() {
+			TZTIMES_2 = 0;
+			TZTIMER_2 = null;
 		}, 2000);
 	}
 }
